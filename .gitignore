@@ -1,0 +1,17 @@
+node_modules/
+.next/
+.npm-cache/
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# Secrets — never commit. Only the placeholder example is tracked.
+.env*
+!.env.local.example
+
+# Local-only working screenshots for the PDF (not part of the repo)
+evidence/page6-*.png
+
+# Build/process notes — kept local, not part of the repo
+BUILD_SPEC.md
+evidence/EVIDENCE.md

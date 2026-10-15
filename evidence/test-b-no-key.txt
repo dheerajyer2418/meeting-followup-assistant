@@ -1,0 +1,2 @@
+{"error":"Server is not configured with a GEMINI_API_KEY. Add it to .env.local and restart."}
+HTTP_STATUS:503

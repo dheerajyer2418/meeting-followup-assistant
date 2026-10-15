@@ -1,0 +1,118 @@
+{
+  "confirmedDecisions": [
+    {
+      "text": "The approved launch date is October 20.",
+      "quote": "The agreed and approved launch date is October 20.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "The first release includes account onboarding, migration of existing customer profiles, and a read-only reporting dashboard.",
+      "quote": "The first release includes account onboarding, migration of existing customer profiles, and a read-only reporting dashboard.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "Custom reporting and billing automation are outside the approved scope.",
+      "quote": "Custom reporting and billing automation are outside the approved scope.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "A staged rollout starting with the pilot customer group before opening access to all customers is approved.",
+      "quote": "The team has approved a staged rollout, starting with the pilot customer group before opening access to all customers.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "Existing customer access must remain available throughout the migration.",
+      "quote": "Existing customer access must remain available throughout the migration.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "The launch checklist must include a rollback plan and a review of pilot feedback.",
+      "quote": "The launch checklist must include a rollback plan and a review of pilot feedback.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "Keeping the staged rollout with the pilot customer group first is confirmed.",
+      "quote": "Daniel Kim: To confirm, we are keeping the staged rollout with the pilot customer group first.",
+      "source": "Transcript"
+    },
+    {
+      "text": "Custom reporting stays out of this release, and the read-only dashboard is sufficient.",
+      "quote": "Alex: We also confirm that custom reporting stays out of this release. The read-only dashboard is sufficient for now.",
+      "source": "Transcript"
+    }
+  ],
+  "requestedChanges": [
+    {
+      "text": "Move the launch earlier to October 18.",
+      "quote": "Alex (client): Could we move the launch earlier to October 18? Our sales team would like to demonstrate the new onboarding experience that week.",
+      "source": "Transcript"
+    }
+  ],
+  "actionItems": [
+    {
+      "text": "Complete the onboarding migration",
+      "owner": "Priya Nair",
+      "deadline": "October 15",
+      "quote": "Priya Nair owns the onboarding migration and will complete it by October 15.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "Deliver the quality assurance test summary",
+      "owner": "Daniel Kim",
+      "deadline": "October 16",
+      "quote": "Daniel Kim owns quality assurance and will deliver the test summary by October 16.",
+      "source": "Approved Plan"
+    },
+    {
+      "text": "Update the rollback plan before launch",
+      "owner": "not stated",
+      "deadline": "before launch",
+      "quote": "Alex: Someone needs to update the rollback plan before launch.",
+      "source": "Transcript"
+    },
+    {
+      "text": "Review pilot feedback",
+      "owner": "not stated",
+      "deadline": "not stated",
+      "quote": "Alex: We should also review pilot feedback.",
+      "source": "Transcript"
+    }
+  ],
+  "conflicts": [
+    {
+      "description": "Launch date discrepancy between approved plan and client request",
+      "planSays": "The agreed and approved launch date is October 20. This date remains the delivery commitment unless the sponsor explicitly approves a change.",
+      "transcriptSays": "Alex (client): Could we move the launch earlier to October 18? Our sales team would like to demonstrate the new onboarding experience that week.",
+      "status": "Open request — not approved; pending sponsor sign-off"
+    }
+  ],
+  "openQuestions": [
+    "Who will own the rollback plan update? Supporting quote: \"Priya Nair: We still need to decide who will own that rollback update.\" (Source: Transcript)",
+    "Who will own the review of pilot feedback? Supporting quote: \"Alex: We should also review pilot feedback.\" and \"Priya Nair: We still need to decide who will own that rollback update.\" (Source: Transcript)"
+  ],
+  "proposedRecordUpdates": [
+    {
+      "field": "launchDateStatus",
+      "proposedValue": "Approved launch date is October 20; pending unapproved request to move to October 18 awaiting sponsor sign-off.",
+      "evidence": "\"The agreed and approved launch date is October 20.\" (Source: Approved Plan) and \"That is a request we will need sign-off for. I will check with the sponsor; we do not have approval to change the October 20 launch date today.\" (Source: Transcript)"
+    },
+    {
+      "field": "unassignedAction_rollbackUpdate",
+      "owner": "not stated",
+      "deadline": "before launch",
+      "proposedValue": "Update the rollback plan before launch (Owner: not stated)",
+      "evidence": "\"Alex: Someone needs to update the rollback plan before launch.\" (Source: Transcript)"
+    },
+    {
+      "field": "unassignedAction_reviewPilotFeedback",
+      "owner": "not stated",
+      "deadline": "not stated",
+      "proposedValue": "Review pilot feedback (Owner: not stated)",
+      "evidence": "\"Alex: We should also review pilot feedback.\" (Source: Transcript)"
+    }
+  ],
+  "followUpEmail": {
+    "subject": "Meeting Follow-up: Orion Project Check-in",
+    "body": "Hi Orion team,\n\nThanks for a productive check-in today. Here is a summary of our confirmed commitments, pending requests, and action items:\n\nConfirmed Commitments:\n- Approved Launch Date: October 20\n- Scope: Account onboarding, migration of existing customer profiles, and read-only reporting dashboard (custom reporting and billing automation remain out of scope).\n- Rollout: Staged rollout starting with the pilot customer group, ensuring existing customer access remains available.\n\nPending Requests:\n- Client requested to move the launch date to October 18. This remains an open request awaiting sponsor sign-off and is not currently approved.\n\nAction Items & Deadlines:\n- Priya Nair: Complete onboarding migration by October 15.\n- Daniel Kim: Deliver quality assurance test summary (including unresolved pilot defects) by October 16.\n- [Not stated]: Update the rollback plan before launch.\n- [Not stated]: Review pilot feedback.\n\nPlease let us know if any details need adjustment.\n\nBest regards,\nMeeting Follow-up Assistant"
+  }
+}
