@@ -76,14 +76,99 @@ Right now you paste the plan and transcript in by hand. Inside **Gemini Enterpri
 
 ---
 
-### For developers
+## Run your own version
 
-Next.js + TypeScript, calling Google Gemini from the server (your API key never reaches the browser). No
-database — saved items use the browser's local storage. To run it yourself:
+This is a Next.js + TypeScript app that calls Google Gemini from the server, so your API key never reaches
+the browser. There's no database — saved items use the browser's own storage. Here's everything you need to
+get it running on your computer, start to finish.
 
-1. `npm install`
-2. Create a file named `.env.local` with one line: `GEMINI_API_KEY=your_key` (free key at
-   https://aistudio.google.com/apikey)
-3. `npm run dev`, then open http://localhost:3000
+### 1. Install the tools you need (one time)
 
-Real prompts, AI responses, and test screenshots from actual runs are in the `evidence/` folder.
+- **Node.js 18.18 or newer** (this includes `npm`). Download it from https://nodejs.org — pick the "LTS"
+  version. To check it worked, open a terminal and run `node -v`; you should see a version number.
+- **Git** (optional, only if you want to clone the code). Download from https://git-scm.com.
+
+### 2. Get the code
+
+Either way is fine:
+
+- **With Git:**
+  ```
+  git clone https://github.com/dheerajyer2418/meeting-followup-assistant.git
+  cd meeting-followup-assistant
+  ```
+- **Without Git:** on the GitHub page, click the green **Code** button → **Download ZIP**, unzip it, then
+  open a terminal in that folder.
+
+### 3. Install the project's dependencies
+
+From inside the project folder, run:
+
+```
+npm install
+```
+
+This downloads the libraries the app needs. It only has to be done once (and again if the code updates).
+
+### 4. Get a free Google Gemini API key
+
+1. Go to https://aistudio.google.com/apikey and sign in with a Google account.
+2. Click **Create API key** and copy the key it gives you.
+
+Keep this key private — treat it like a password.
+
+### 5. Add your key to the project
+
+In the project folder, create a file named exactly **`.env.local`** with this single line (paste your real
+key in place of `your_key_here`):
+
+```
+GEMINI_API_KEY=your_key_here
+```
+
+There's a template file called `.env.local.example` you can copy and rename if that's easier. This file is
+ignored by Git on purpose, so your key never gets uploaded.
+
+### 6. Start the app
+
+```
+npm run dev
+```
+
+When it says it's ready, open **http://localhost:3000** in your browser. Click **Load Orion sample →
+Analyze** to try it. To stop the app, press **Ctrl + C** in the terminal.
+
+### 7. (Optional) Run the production build
+
+To run it the way it runs when deployed:
+
+```
+npm run build
+npm start
+```
+
+### 8. (Optional) Put it online yourself
+
+The easiest host is **Vercel**:
+
+1. Create a free account at https://vercel.com and install its tool: `npm install -g vercel`.
+2. From the project folder, run `vercel` and follow the prompts.
+3. In your project on the Vercel dashboard, go to **Settings → Environment Variables** and add
+   `GEMINI_API_KEY` with your key, then redeploy. (This keeps the key on the server, never in the browser.)
+
+### If setup goes wrong
+
+- **`node` or `npm` "not recognized."** Node.js isn't installed or the terminal was open before you
+  installed it — install Node, then close and reopen the terminal.
+- **`npm install` fails.** Check your internet connection and that you're inside the project folder (you
+  should see a `package.json` file there), then try again.
+- **The app loads but Analyze says the key is missing.** Double-check the file is named `.env.local`
+  (not `.env.local.txt`), the line reads `GEMINI_API_KEY=...`, and you **restarted** `npm run dev` after
+  creating it.
+- **"AI request failed."** The key may be wrong or out of quota, or the AI service was briefly busy. Try
+  again; if it persists, create a fresh key.
+
+---
+
+Real prompts, AI responses, and test screenshots from actual runs are saved in the `evidence/` folder if you
+want to see examples of the output.
